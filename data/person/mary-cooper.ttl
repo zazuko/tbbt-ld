@@ -1,0 +1,16 @@
+@prefix s: <http://schema.org/> .
+
+<#person> a s:Person;
+	s:address [
+		s:addressCountry "US";
+		s:addressRegion "TX"
+	];
+	s:children <sheldon-cooper#person>;
+	s:familyName "Cooper";
+	s:givenName "Mary";
+	s:knows
+		<howard-wolowitz#person>,
+		<penny#person>,
+		<rajesh-koothrappali#person>,
+		<sheldon-cooper#person>
+	.

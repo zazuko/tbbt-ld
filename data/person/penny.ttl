@@ -1,0 +1,21 @@
+@prefix s: <http://schema.org/> .
+
+<#person> a s:Person;
+	s:address [
+		s:addressCountry "US";
+		s:addressLocality "Pasadena";
+		s:addressRegion "CA";
+		s:postalCode "91104";
+		s:streetAddress "2311 North Los Robles Avenue, Aparment 4B"
+	];
+	s:givenName "Penny";
+	s:jobTitle "pharmaceutical sales representative";
+	s:knows
+		<amy-farrah-fowler#person>,
+		<bernadette-rostenkowski#person>,
+		<howard-wolowitz#person>,
+		<leonard-hofstadter#person>,
+		<rajesh-koothrappali#person>,
+		<sheldon-cooper#person>,
+		<stuart-bloom#person>
+	.

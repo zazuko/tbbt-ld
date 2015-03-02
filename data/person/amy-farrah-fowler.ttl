@@ -1,0 +1,16 @@
+@prefix s: <http://schema.org/> .
+
+<#person> a s:Person;
+	s:additionalName "Farrah";
+	s:familyName "Fowler";
+	s:givenName "Amy";
+	s:jobTitle "neurobiologist";
+	s:knows
+		<bernadette-rostenkowski#person>,
+		<howard-wolowitz#person>,
+		<leonard-hofstadter#person>,
+		<penny#person>,
+        <rajesh-koothrappali#person>,
+		<sheldon-cooper#person>,
+		<stuart-bloom#person>
+	.

@@ -1,0 +1,15 @@
+@prefix s: <http://schema.org/> .
+
+<#person> a s:Person;
+	s:familyName "Bloom";
+	s:givenName "Stuart";
+	s:jobTitle "comic book store owner";
+	s:knows
+		<amy-farrah-fowler#person>,
+		<bernadette-rostenkowski#person>,
+		<howard-wolowitz#person>,
+		<leonard-hofstadter#person>,
+		<penny#person>,
+		<rajesh-koothrappali#person>,
+		<sheldon-cooper#person>
+	.

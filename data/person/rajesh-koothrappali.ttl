@@ -1,0 +1,16 @@
+@prefix s: <http://schema.org/> .
+
+<#person> a s:Person;
+	s:additionalName "Ramayan Raj";
+	s:familyName "Koothrappali";
+	s:givenName "Rajesh";
+	s:jobTitle "astrophysicist";
+	s:knows
+		<amy-farrah-fowler#person>,
+		<bernadette-rostenkowski#person>,
+		<howard-wolowitz#person>,
+		<leonard-hofstadter#person>,
+		<penny#person>,
+		<sheldon-cooper#person>,
+		<stuart-bloom#person>
+	.

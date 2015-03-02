@@ -1,0 +1,20 @@
+{
+  "name": "tbbt-ld",
+  "version": "0.0.1",
+  "description": "The Big Bang Theory Linked Data",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "rdf-interfaces": "",
+    "rdf-ext": ""
+  },
+  "keywords": [
+    "big bang theory",
+    "schema.org",
+    "rdf"
+  ],
+  "author": "bergi@axolotlfarm.org",
+  "license": "MIT"
+}

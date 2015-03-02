@@ -1,0 +1,17 @@
+@prefix s: <http://schema.org/> .
+
+<#person> a s:Person;
+	s:additionalName "Maryann";
+	s:familyName "Rostenkowski-Wolowitz";
+	s:givenName "Bernadette";
+	s:jobTitle "microbiologist";
+	s:knows
+		<amy-farrah-fowler#person>,
+		<howard-wolowitz#person>,
+		<leonard-hofstadter#person>,
+		<penny#person>,
+		<rajesh-koothrappali#person>,
+		<sheldon-cooper#person>,
+		<stuart-bloom#person>;
+	s:spouse <howard-wolowitz#person>
+	.
