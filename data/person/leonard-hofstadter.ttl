@@ -13,12 +13,12 @@
 	s:givenName "Leonard";
 	s:jobTitle "experimental physicist";
 	s:knows
-		<amy-farrah-fowler#person>,
-		<bernadette-rostenkowski#person>,
-		<howard-wolowitz#person>,
-		<mary-cooper#person>,
-		<penny#person>,
-		<rajesh-koothrappali#person>,
-		<sheldon-cooper#person>,
-		<stuart-bloom#person>
+		<http://localhost:8080/person/amy-farrah-fowler#person>,
+		<http://localhost:8080/person/bernadette-rostenkowski#person>,
+		<http://localhost:8080/person/howard-wolowitz#person>,
+		<http://localhost:8080/person/mary-cooper#person>,
+		<http://localhost:8080/person/penny#person>,
+		<http://localhost:8080/person/rajesh-koothrappali#person>,
+		<http://localhost:8080/person/sheldon-cooper#person>,
+		<http://localhost:8080/person/stuart-bloom#person>
 	.

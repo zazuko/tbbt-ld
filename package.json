@@ -6,9 +6,15 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/zazukoians/tbbt-ld.git"
+  },
   "devDependencies": {
-    "rdf-interfaces": "",
-    "rdf-ext": ""
+    "es6-promise": "2.*",
+    "glob": "4.*",
+    "rdf-interfaces": "0.1.*",
+    "rdf-ext": "0.1.*"
   },
   "keywords": [
     "big bang theory",

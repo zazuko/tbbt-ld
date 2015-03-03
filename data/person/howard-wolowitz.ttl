@@ -6,12 +6,12 @@
 	s:givenName "Howard";
 	s:jobTitle "aerospace engineer";
 	s:knows
-		<amy-farrah-fowler#person>,
-		<bernadette-rostenkowski#person>,
-		<leonard-hofstadter#person>,
-		<penny#person>,
-		<rajesh-koothrappali#person>,
-		<sheldon-cooper#person>,
-		<stuart-bloom#person>;
-	s:spouse <bernadette-rostenkowski#person>
+		<http://localhost:8080/person/amy-farrah-fowler#person>,
+		<http://localhost:8080/person/bernadette-rostenkowski#person>,
+		<http://localhost:8080/person/leonard-hofstadter#person>,
+		<http://localhost:8080/person/penny#person>,
+		<http://localhost:8080/person/rajesh-koothrappali#person>,
+		<http://localhost:8080/person/sheldon-cooper#person>,
+		<http://localhost:8080/person/stuart-bloom#person>;
+	s:spouse <http://localhost:8080/person/bernadette-rostenkowski#person>
 	.

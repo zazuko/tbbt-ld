@@ -6,11 +6,11 @@
 	s:givenName "Amy";
 	s:jobTitle "neurobiologist";
 	s:knows
-		<bernadette-rostenkowski#person>,
-		<howard-wolowitz#person>,
-		<leonard-hofstadter#person>,
-		<penny#person>,
-        <rajesh-koothrappali#person>,
-		<sheldon-cooper#person>,
-		<stuart-bloom#person>
+		<http://localhost:8080/person/bernadette-rostenkowski#person>,
+		<http://localhost:8080/person/howard-wolowitz#person>,
+		<http://localhost:8080/person/leonard-hofstadter#person>,
+		<http://localhost:8080/person/penny#person>,
+        <http://localhost:8080/person/rajesh-koothrappali#person>,
+		<http://localhost:8080/person/sheldon-cooper#person>,
+		<http://localhost:8080/person/stuart-bloom#person>
 	.

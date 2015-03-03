@@ -5,12 +5,12 @@
 		s:addressCountry "US";
 		s:addressRegion "TX"
 	];
-	s:children <sheldon-cooper#person>;
+	s:children <http://localhost:8080/person/sheldon-cooper#person>;
 	s:familyName "Cooper";
 	s:givenName "Mary";
 	s:knows
-		<howard-wolowitz#person>,
-		<penny#person>,
-		<rajesh-koothrappali#person>,
-		<sheldon-cooper#person>
+		<http://localhost:8080/person/howard-wolowitz#person>,
+		<http://localhost:8080/person/penny#person>,
+		<http://localhost:8080/person/rajesh-koothrappali#person>,
+		<http://localhost:8080/person/sheldon-cooper#person>
 	.
