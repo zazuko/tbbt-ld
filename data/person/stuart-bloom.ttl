@@ -1,15 +1,15 @@
 @prefix s: <http://schema.org/> .
 
-<#person> a s:Person;
+<> a s:Person;
 	s:familyName "Bloom";
 	s:givenName "Stuart";
 	s:jobTitle "comic book store owner";
 	s:knows
-		<http://localhost:8080/person/amy-farrah-fowler#person>,
-		<http://localhost:8080/person/bernadette-rostenkowski#person>,
-		<http://localhost:8080/person/howard-wolowitz#person>,
-		<http://localhost:8080/person/leonard-hofstadter#person>,
-		<http://localhost:8080/person/penny#person>,
-		<http://localhost:8080/person/rajesh-koothrappali#person>,
-		<http://localhost:8080/person/sheldon-cooper#person>
+		<amy-farrah-fowler>,
+		<bernadette-rostenkowski>,
+		<howard-wolowitz>,
+		<leonard-hofstadter>,
+		<penny>,
+		<rajesh-koothrappali>,
+		<sheldon-cooper>
 	.

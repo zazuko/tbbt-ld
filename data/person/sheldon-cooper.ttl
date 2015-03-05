@@ -1,6 +1,6 @@
 @prefix s: <http://schema.org/> .
 
-<#person> a s:Person;
+<> a s:Person;
 	s:additionalName "Lee";
 	s:address [
 		s:addressCountry "US";
@@ -13,12 +13,12 @@
 	s:givenName "Sheldon";
 	s:jobTitle "theoretical physicist";
 	s:knows
-		<http://localhost:8080/person/amy-farrah-fowler#person>,
-		<http://localhost:8080/person/bernadette-rostenkowski#person>,
-		<http://localhost:8080/person/howard-wolowitz#person>,
-		<http://localhost:8080/person/leonard-hofstadter#person>,
-		<http://localhost:8080/person/penny#person>,
-		<http://localhost:8080/person/rajesh-koothrappali#person>,
-		<http://localhost:8080/person/stuart-bloom#person>;
-	s:parent <http://localhost:8080/person/mary-cooper#person>
+		<amy-farrah-fowler>,
+		<bernadette-rostenkowski>,
+		<howard-wolowitz>,
+		<leonard-hofstadter>,
+		<penny>,
+		<rajesh-koothrappali>,
+		<stuart-bloom>;
+	s:parent <mary-cooper>
 	.

@@ -1,16 +1,16 @@
 @prefix s: <http://schema.org/> .
 
-<#person> a s:Person;
+<> a s:Person;
 	s:address [
 		s:addressCountry "US";
 		s:addressRegion "TX"
 	];
-	s:children <http://localhost:8080/person/sheldon-cooper#person>;
+	s:children <sheldon-cooper>;
 	s:familyName "Cooper";
 	s:givenName "Mary";
 	s:knows
-		<http://localhost:8080/person/howard-wolowitz#person>,
-		<http://localhost:8080/person/penny#person>,
-		<http://localhost:8080/person/rajesh-koothrappali#person>,
-		<http://localhost:8080/person/sheldon-cooper#person>
+		<howard-wolowitz>,
+		<penny>,
+		<rajesh-koothrappali>,
+		<sheldon-cooper>
 	.
