@@ -4,17 +4,20 @@
   "description": "The Big Bang Theory Linked Data",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "prepublish": "node prepublish",
+    "test": "standard"
   },
   "repository": {
     "type": "git",
     "url": "git://github.com/zazukoians/tbbt-ld.git"
   },
   "devDependencies": {
-    "es6-promise": "2.*",
-    "glob": "4.*",
-    "rdf-interfaces": "0.1.*",
-    "rdf-ext": "0.1.*"
+    "glob": "^7.1.2",
+    "rdf-ext": "^1.1.0",
+    "rdf-parser-n3": "^1.1.0",
+    "rdf-serializer-ntriples": "^1.0.0",
+    "shelljs": "^0.7.8",
+    "standard": "^10.0.3"
   },
   "keywords": [
     "big bang theory",

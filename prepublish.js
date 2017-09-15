@@ -1,54 +1,64 @@
-var
-  fs = require('fs'),
-  glob = require('glob'),
-  path = require('path'),
-  rdf = require('rdf-interfaces'),
-  Promise = require('es6-promise').Promise;
+const fs = require('fs')
+const N3Parser = require('rdf-parser-n3')
+const NTriplesSerializer = require('rdf-serializer-ntriples')
+const glob = require('glob')
+const path = require('path')
+const rdf = require('rdf-ext')
+const shell = require('shelljs')
+const url = require('url')
 
-require('rdf-ext')(rdf);
+const baseUrl = 'http://localhost:8080/'
 
-var
-  files,
-  graphs = {},
-  singleGraph = rdf.createGraph(),
-  parser = new rdf.promise.Parser(new rdf.TurtleParser());
+const files = glob.sync('data/**/*.ttl').map((filename) => {
+  const folderPath = path.dirname(filename)
+  const filePath = path.basename(filename, path.extname(filename))
 
+  const iri = url.resolve(baseUrl, path.join(folderPath, filePath))
 
-files = glob.sync('data/**/*.ttl').map(function (filename) {
-  var iri = 'http://localhost:8080/' +
-    path.dirname(filename) + '/'+
-    path.basename(filename, path.extname(filename));
+  return {
+    filename: filename,
+    iri: iri
+  }
+})
 
-  return {filename: filename, iri: iri};
-});
+function createNTriples (dataset) {
+  const output = fs.createWriteStream('dist/tbbt.nt')
+  const serializer = new NTriplesSerializer()
 
+  return rdf.waitFor(serializer.import(rdf.graph(dataset).toStream()).pipe(output))
+}
 
-Promise.all(
-  files.map(function (file) {
-    return parser.parse(fs.readFileSync(file.filename).toString(), file.iri)
-      .then(function (graph) {
-        return graphs[file.iri] = graph;
-      })})
-  )
-  .then(function (result) {
-    result.forEach(function (graph) {
-      singleGraph.addAll(graph);
-    });
+function createNQuads (dataset) {
+  const output = fs.createWriteStream('dist/tbbt.nq')
+  const serializer = new NTriplesSerializer()
+
+  return rdf.waitFor(serializer.import(dataset.toStream()).pipe(output))
+}
+
+Promise.all(files.map((file) => {
+  const input = fs.createReadStream(file.filename)
+
+  return rdf.dataset().import(N3Parser.import(input, {factory: rdf, baseIRI: file.iri})).then((graph) => {
+    return graph.map((t) => {
+      return rdf.quad(t.subject, t.predicate, t.object, rdf.namedNode(file.iri))
+    })
   })
-  .then(function () {
-    // build N-Triples single graph
-    fs.writeFileSync('dist/tbbt.nt', singleGraph.toString());
+})).then((result) => {
+  const dataset = rdf.dataset()
+
+  result.forEach((graph) => {
+    dataset.addAll(graph)
   })
-  .catch(function (error) {
-    console.error(error.stack);
-  });
 
+  return dataset
+}).then((dataset) => {
+  shell.rm('-rf', 'dist')
+  shell.mkdir('-p', 'dist')
 
-// build N-Quads
-//TODO
-
-// build JSON-LD single graph
-//TODO
-
-// build JSON-LD
-//TODO
+  return Promise.all([
+    createNTriples(dataset),
+    createNQuads(dataset)
+  ])
+}).catch((error) => {
+  console.error(error.stack)
+})
