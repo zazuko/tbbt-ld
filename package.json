@@ -1,6 +1,6 @@
 {
   "name": "tbbt-ld",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "The Big Bang Theory Linked Data",
   "main": "index.js",
   "scripts": {
