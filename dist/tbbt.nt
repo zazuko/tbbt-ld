@@ -42,7 +42,7 @@ _:b1 <http://schema.org/addressCountry> "US" .
 _:b1 <http://schema.org/addressLocality> "Pasadena" .
 _:b1 <http://schema.org/addressRegion> "CA" .
 _:b1 <http://schema.org/postalCode> "91104" .
-_:b1 <http://schema.org/streetAddress> "2311 North Los Robles Avenue, Aparment 4A" .
+_:b1 <http://schema.org/streetAddress> "2311 North Los Robles Avenue, Apartment 4A" .
 <http://localhost:8080/data/person/leonard-hofstadter> <http://schema.org/address> _:b1 .
 <http://localhost:8080/data/person/leonard-hofstadter> <http://schema.org/familyName> "Hofstadter" .
 <http://localhost:8080/data/person/leonard-hofstadter> <http://schema.org/givenName> "Leonard" .
@@ -71,7 +71,7 @@ _:b3 <http://schema.org/addressCountry> "US" .
 _:b3 <http://schema.org/addressLocality> "Pasadena" .
 _:b3 <http://schema.org/addressRegion> "CA" .
 _:b3 <http://schema.org/postalCode> "91104" .
-_:b3 <http://schema.org/streetAddress> "2311 North Los Robles Avenue, Aparment 4B" .
+_:b3 <http://schema.org/streetAddress> "2311 North Los Robles Avenue, Apartment 4B" .
 <http://localhost:8080/data/person/penny> <http://schema.org/address> _:b3 .
 <http://localhost:8080/data/person/penny> <http://schema.org/givenName> "Penny" .
 <http://localhost:8080/data/person/penny> <http://schema.org/jobTitle> "pharmaceutical sales representative" .
@@ -100,7 +100,7 @@ _:b4 <http://schema.org/addressCountry> "US" .
 _:b4 <http://schema.org/addressLocality> "Pasadena" .
 _:b4 <http://schema.org/addressRegion> "CA" .
 _:b4 <http://schema.org/postalCode> "91104" .
-_:b4 <http://schema.org/streetAddress> "2311 North Los Robles Avenue, Aparment 4A" .
+_:b4 <http://schema.org/streetAddress> "2311 North Los Robles Avenue, Apartment 4A" .
 <http://localhost:8080/data/person/sheldon-cooper> <http://schema.org/address> _:b4 .
 <http://localhost:8080/data/person/sheldon-cooper> <http://schema.org/familyName> "Cooper" .
 <http://localhost:8080/data/person/sheldon-cooper> <http://schema.org/givenName> "Sheldon" .
